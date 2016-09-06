@@ -69,12 +69,10 @@ public class ListOperations
 		switch (cell.getCellType()) 
 		{
 	       case Cell.CELL_TYPE_NUMERIC:
-	       //Double value= spreadsheet.getRow(row).getCell(column).getNumericCellValue();
 	       Double value=cell.getNumericCellValue();
 	       base1=  value.toString();
 	       break;
 	       case Cell.CELL_TYPE_STRING:
-	       //base1=spreadsheet.getRow(row).getCell(column).getStringCellValue(); 
 	       base1=cell.getStringCellValue();
 	    	break;
 	     }
