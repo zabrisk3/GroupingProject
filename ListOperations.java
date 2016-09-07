@@ -50,13 +50,13 @@ public class ListOperations
 		String base1="";
 		switch (cell.getCellType()) 
 		{
-            case Cell.CELL_TYPE_NUMERIC:
-            Double value=cell.getNumericCellValue();
-            base1=  value.toString();
-            break;
-            case Cell.CELL_TYPE_STRING:
-            base1=cell.getStringCellValue();
-            break;
+                case Cell.CELL_TYPE_NUMERIC:
+                Double value=cell.getNumericCellValue();
+                base1=  value.toString();
+                break;
+                case Cell.CELL_TYPE_STRING:
+                base1=cell.getStringCellValue();
+                break;
 	     }
 		return base1;
 	} 
