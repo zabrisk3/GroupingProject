@@ -27,7 +27,7 @@ public class GroupCountWithChar
 			for (int j=0; j< noOfRows; j++)
 			{
 				Integer [] test={i,j};
-				if (ListOperations.already_in_list_big(listoflists, test))
+				if (ListOperations.inListbig(listoflists, test))
 				{
 					; //do nothing
 				}
@@ -53,7 +53,7 @@ public class GroupCountWithChar
 							Cell cell_type=groupingSheet.getRow(m).getCell(l);
 							String base1=ListOperations.getStringvalue(cell_type);	
 							
-							if (!ListOperations.already_in_list_small(rejectlist, base)); 
+							if (!ListOperations.inListsmall(rejectlist, base)); 
 							{	
 	
 								rejectlist.add(base);
@@ -216,7 +216,7 @@ public class GroupCountWithChar
 								}
 								
 								for (int z=0; z< candlist.size(); z++) {
-									if(base1.equals(triallist[z]) && !ListOperations.already_in_list_small(newlist,candlist.get(z)))
+									if(base1.equals(triallist[z]) && !ListOperations.inListsmall(newlist,candlist.get(z)))
 									{
 										newlist.add(candlist.get(z));
 									}

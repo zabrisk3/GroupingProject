@@ -4,7 +4,7 @@ import org.apache.poi.ss.usermodel.Cell;
 
 public class ListOperations 
 {
-	public static boolean already_in_list_big(ArrayList<ArrayList<Integer []>> biglist, Integer[] pair)
+	public static boolean inListbig(ArrayList<ArrayList<Integer []>> biglist, Integer[] pair)
 	{
 		if(biglist.size()==0)
 		{
@@ -14,7 +14,7 @@ public class ListOperations
 		{
 			for(int i=0; i< biglist.size(); i++)
 			{
-				if (already_in_list_small(biglist.get(i), pair))
+				if (inListsmall(biglist.get(i), pair))
 				{
 					return true;
 				}
@@ -23,7 +23,8 @@ public class ListOperations
 		}
 		return false;
 	}
-	public static boolean already_in_list_small(ArrayList<Integer []> smalllist, Integer[] pair)
+	
+    public static boolean inListsmall(ArrayList<Integer []> smalllist, Integer[] pair)
 	{
 		if(smalllist.size()==0)
 		{
@@ -41,25 +42,6 @@ public class ListOperations
 			}
 		}
 		return false;
-	}
-	
-	public static int get_number_of_unique_values(ArrayList<Integer []> pairlist)
-	{ 
-
-		ArrayList<Integer[]> uniquevalues=new ArrayList<Integer[]>();
-		for (int k=0; k< pairlist.size(); k++)
-		{
-			int x=pairlist.get(k)[0];
-			int y=pairlist.get(k)[1];
-			Integer[] cand ={x,y};
-			if(!already_in_list_small(uniquevalues, cand))
-			{
-				uniquevalues.add(cand);
-			}
-			
-		}
-		return uniquevalues.size();
-		
 	}
 	
 	
