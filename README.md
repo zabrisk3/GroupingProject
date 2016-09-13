@@ -1,4 +1,4 @@
-# GroupingProject
+# Symbol Groupings Data Analysis Project
 This code finds "groups" of numbers, letters, or symbols that exist in an Excel spreadsheet. 
 Two values are grouped if they are 1) the same, and 2) one exists directly above, below, or to the side of the other. 
 This code reads in an Excel spreadsheet and then outputs another Excel file showing all groups, the values of the
