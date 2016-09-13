@@ -27,12 +27,7 @@ public class GroupCountWithChar
 			for (int j=0; j< noOfRows; j++)
 			{
 				Integer [] test={i,j};
-				if (ListOperations.inListbig(listoflists, test))
-				{
-					; //do nothing
-				}
-			
-				else
+				if (!ListOperations.inListbig(listoflists, test))
 				{
 					
 					ArrayList<Integer[]> newlist=new ArrayList<Integer[]>();
